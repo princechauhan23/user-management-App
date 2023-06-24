@@ -1,0 +1,255 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.App {
+  text-align: center;
+}
+
+header {
+  margin-bottom: 2rem;
+  font-weight: bold;
+  font-size: x-large;
+  font-family: "Roboto", sans-serif;
+}
+
+.main-section {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* row-gap: 2rem; */
+}
+
+.form-container {
+  width: 35%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #f5f5f5;
+}
+.form-container form {
+  padding: 8px;
+}
+
+.form-container input {
+  padding: 0.5rem;
+  width: 80%;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.searchBar-container {
+  height: 50px;
+  width: 100%;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e8e3e3;
+  position: relative;
+}
+.searchBar {
+  height: 40px;
+  width: 100%;
+  background-color: #f0f2f5;
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.searchBar input {
+  height: 30px;
+  width: 83%;
+  background-color: #f0f2f5;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 14px;
+  color: #54656f;
+}
+
+.right-panel {
+  width: 58%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.list-container {
+  width: 98%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f0f2f5;
+  border-radius: 0.5rem;
+  padding: 7px;
+}
+
+.listItem {
+  width: 95%;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  boject-fit: cover;
+}
+.details {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  cursor: pointer;
+}
+.userName {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  margin: 0px;
+}
+p {
+  font-family: "Roboto", sans-serif;
+  margin: 2px;
+  padding: 2px;
+}
+.button-conatiner {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.button-conatiner button {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 5px 0px;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: skyblue;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+
+#modal {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal:empty {
+  display: none;
+}
+
+#modal > div {
+  background-color: white;
+  min-width: 350px;
+  padding: 15px;
+  text-align: center;
+  border-radius: 30px;
+  background: #faeff0;
+}
+
+#modal .buttons button {
+  display: inline-block;
+  width: 70px;
+  border: none;
+  border-radius: 5px;
+  background-color: skyblue;
+  color: #54656f;
+}
+
+/* profile card */
+.card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f0f2f5;
+  border-radius: 0.5rem;
+}
+.card-details {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.para {
+  /* font-size: 1.5rem; */
+  font-family: "Roboto", sans-serif;
+  margin: 0px;
+  padding: 2px;
+  max-width: 500px;
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    font-size: large;
+    font-weight: normal;
+  }
+  .main-section {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .form-container {
+    width: 70%;
+    height: 250px;
+    margin-bottom: 25px;
+  }
+  .right-panel {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .form-container {
+    width: 90%;
+    height: 250px;
+    margin-bottom: 25px;
+  }
+  .right-panel {
+    width: 90%;
+  }
+}
