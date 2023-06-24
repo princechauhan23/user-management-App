@@ -9,7 +9,6 @@ export const UserContextProvider = ({ children }) => {
 
   // reducer function
   const userReducer = (state, action) => {
-    console.log(action, "action");
     switch (action.type) {
       case "ADD_USER":
         return [...state, action.payload];
